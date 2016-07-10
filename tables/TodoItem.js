@@ -11,6 +11,11 @@ var azureMobileApps = require('azure-mobile-apps');
 // Create a new table definition
 var table = azureMobileApps.table();
 
+table.read(function (context) {
+    console.log('user = ', context.user);
+    return context.execute();
+});
+
 // Configure specific code when the client does a request
 // READ - only return records belonging to the authenticated user
 // table.read(function (context) {
