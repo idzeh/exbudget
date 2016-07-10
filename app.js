@@ -28,8 +28,6 @@ var mobileApp = azureMobileApps({
     }
 });
 
-});
-
 // Import the files from the tables directory to configure the /tables endpoint
 mobileApp.tables.import('./tables');
 
